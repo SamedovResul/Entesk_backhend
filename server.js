@@ -18,15 +18,16 @@ dotenv.config()
 
 app.use(cors())
 
-app.get('/', (req,res) =>{
-  re.send("hello world")
-})
+
 
 app.use(express.json({limit: "30mb", extended: true}));
 app.use(express.urlencoded({limit: "30mb", extended: true}));
 
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')))
 app.use('/users', userRoutes)
+app.get('/', (req,res) =>{
+  re.send("hello world")
+})
 // const CONNECTION_URL = "mongodb+srv://Rasul:resul1418@cluster0.kihs8.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
 
