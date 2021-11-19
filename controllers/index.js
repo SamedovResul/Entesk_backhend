@@ -72,10 +72,8 @@ export const updateUser = async (req, res) =>{
 
   let files = []
   if(req.files){
-    // console.log(req.files)
 
     for (let i = 0; i < update.file.length; i++) {
-      // console.log(update.file[i].filepath)
       fs.unlinkSync(update.file[i].filepath)
     }
 
