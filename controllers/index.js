@@ -38,9 +38,6 @@ export const createUser = async (req,res) =>{
       }
       files.push(file)
     });
-    // user.fileName = req.file.originalname
-    // user.filepath = req.file.path
-    // user.fileType = req.file.mimetype
 
     user.file = files
   }
