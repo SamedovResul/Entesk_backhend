@@ -43,9 +43,10 @@ export const createUser = async (req,res) =>{
     // user.fileType = req.file.mimetype
 
     user.file = files
+    console.log(req.files)
   }
 
-  console.log(req.files)
+  
   const newUser = new UserData(user)
   try{
     await newUser.save()
