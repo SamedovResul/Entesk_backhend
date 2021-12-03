@@ -4,7 +4,10 @@ const userSchema = mongoose.Schema({
   title: String,
   text: String,
   blogName: String,
-  file:[Object],
+  slidefile:{
+    fileName: String,
+    filePath: String
+  },
   createdAt: {
     type: Date,
     default: new Date(),
